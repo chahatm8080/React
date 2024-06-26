@@ -1,0 +1,160 @@
+What is javascript ?
+
+Client side language(primarly)
+Simple threaded language 
+Object oriented language
+Traditional supports functional programming - there no use of class to object oriented programming 
+it convert into functional programming then it executes.
+Event driven-in brower everything run in event driven
+event means there is some action is performed-agar aapne html css then button etc field are there , facebook track every motions that is run bcz of javascript. before javascript there was no user interactions . it was a statics 
+
+
+why javascript required ?
+
+User Interactivity 
+interpreted language - bcz we cannot ask for every user compiled and run - browser directly run without any compilations 
+required dynamically typed language - static type like int float etc in c/c++. but in every time we cannot do for browser.
+
+why learn javascript ?
+javascript only work in the browser 
+it really easy 
+elsential language
+
+
+datatypes and variables
+Operators
+Comments
+Operators
+if/else
+Loops
+
+why we use Loops
+repetion ko reduce karta hai 
+
+
+//arrays functionality
+it is collection of similar datatypes
+
+Study promises, async await, and callbacks:
+Write a function to check if it is palindrome:
+
+
+
+1.callback-hell:
+callback we avoid in asynchronous
+2.Inversion of control:
+
+
+
+ 
+SYNCHRONOUS CODE AND asynchronous CODE IN javascript
+
+Synchronous code executes sequentially. Each operation waits for the previous one to complete before executing
+
+Asynchronous code allows multiple operations to run concurrently, without waiting for the previous ones to complete
+
+
+promises
+resolve callback-hell.js
+
+
+
+issues with promises
+1.Pinpointing the location of an error 
+2.fined gained control
+
+
+issues resolved of promises:
+Async Await: isses resolved all of the above 
+
+
+
+what is async await?
+
+async and await are reserved word
+
+async-more and less behaves as apromises
+
+node.js is runtime environments:
+ for server side programming we use node.js 
+ just like c++ as cpp etc.
+
+express.js
+it is basic server 
+
+
+stack-
+console log will go
+set function timeout will go to stack
+
+web api-time in ms the some data provide 
+queue-web api data will remain in queue until stack is not in empty form 
+
+
+this command we have to use for express-app2
+ npx express-generator --no-view --git
+
+
+
+
+
+what is websockets?
+osi models
+
+ tcp-transport layer pe work karta hai 
+ software -application pe work karta hai 
+
+a web protocols that uses a tcp connection
+works on layer 7 of the osi models
+uses http upgrade header 
+
+
+history of web sockets
+
+
+http polling
+ajax/http request at every fixed intervals 
+
+http long polling 
+similar but difference that instead of server responding as soon as it can
+
+
+comet - low latency 
+http streaming 
+
+server sent events (SSE)
+allows to push server updates to the client by event source interface 
+
+
+http            ||          web sockets             important points 
+
+half                        full                         ==>duplex
+
+request                     bidirectional                ==>messaging
+response                   
+
+
+websockets usages and testing 
+it is used for real time two way communication like:
+web chatting 
+games
+social medai platform
+
+
+future of websockets:
+
+webRTC 
+Open source communication technology ,a collection of standards,protocols , and javascript api
+widely used for many applications.
+
+
+http/2
+http/3
+
+
+newer protocol with better performance
+gaps lef over by http 1.x are filled 
+
+
+
+
