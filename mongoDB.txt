@@ -1,0 +1,150 @@
+What is MongoDB?
+MongoDB is a NoSQL database, which means it does not use traditional table-based relational database structure.
+It uses a flexible, JSON-like format to store data, called BSON (Binary JSON).
+
+
+
+Key Features
+Schema-less: Documents in the same collection do not need to have the same set of fields.
+Scalable: Designed to scale out easily.
+Document-Oriented: Data is stored in documents similar to JSON objects.
+Indexing: Supports dynamic queries with indexing.
+Replication: Provides high availability with replica sets.
+
+
+Basic Concepts
+Database: A container for collections.
+
+Example: mydatabase
+Collection: A group of MongoDB documents, similar to a table in relational databases.
+
+Example: users
+Document: A record in a MongoDB collection, stored in BSON format.
+
+Example:
+json
+Copy code
+{
+  "_id": ObjectId("507f1f77bcf86cd799439011"),
+  "name": "John Doe",
+  "age": 29,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "zip": "10001"
+  }
+}
+
+Field: A key-value pair in a document.
+
+
+Example: "name": "John Doe"
+_id: A unique identifier for each document. Automatically created if not provided.
+
+Common MongoDB Commands
+Start MongoDB Shell:
+
+Show Databases
+Create/Select Database
+Show Collections
+show collections
+
+
+
+Insert a Document
+db.users.insertOne({name: "John Doe", age: 29})
+Find Documents:
+
+Find a the data
+db.users.find()
+
+pretty: It’s used to display results in a more readable format
+db.users.find().pretty()
+
+
+Update a Document:
+db.users.updateOne(
+  { name: "John Doe" },
+  { $set: { age: 30 } }
+)
+
+Delete a Document:
+
+db.users.deleteOne({ name: "John Doe" })
+Drop a Collection:
+
+db.users.drop()
+Drop a Database:
+
+db.dropDatabase()
+
+
+
+
+Querying Data
+Basic Query:
+
+db.users.find({ name: "John Doe" })
+Query with Conditions:
+
+db.users.find({ age: { $gt: 25 } })  // Age greater than 25
+Logical Operators:
+
+db.users.find({
+  $or: [
+    { age: { $lt: 20 } },
+    { age: { $gt: 30 } }
+  ]
+})
+
+
+Projection:
+Only return specific fields:
+
+db.users.find({ age: { $gt: 25 } }, { name: 1, age: 1, _id: 0 })
+
+
+
+Indexing
+Create an Index:
+
+db.users.createIndex({ name: 1 })
+Show Indexes:
+
+
+db.users.getIndexes()
+Drop an Index:
+
+
+db.users.dropIndex("name_1")
+
+
+Aggregation Framework
+Aggregation Pipeline:
+
+Example pipeline to group users by age and count them:
+
+db.users.aggregate([
+  { $group: { _id: "$age", count: { $sum: 1 } } }
+])
+
+
+
+Common Stages:
+
+$match: Filters documents.
+$group: Groups documents by a specified field.
+$sort: Sorts documents.
+$project: Selects specific fields to return.
+
+
+Replication
+Replica Set: A group of mongod instances that maintain the same data set.
+Primary: Accepts write operations.
+Secondary: Replicates data from the primary.
+
+
+Sharding
+Sharding: Method for distributing data across multiple machines.
+Shard: A single database instance in a sharded cluster.
+Router: Routes queries to the appropriate shard.
