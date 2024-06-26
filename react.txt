@@ -1,0 +1,40 @@
+                            REACT FOUNDATION
+
+VANILAA JAVASCRIPT-PURE JAVASCRIPT
+components-part of code that represent the code
+jsx,class vs className,static (fixed) vs dynamic websites(),
+state,components,re-rendering 
+
+
+why do you require REACT
+for dynamic websites we use react but for static we can use html
+
+
+chatgpt  -  react   -    npm run build     -> html/CSS/JS
+HTML AND CSS AND JAVSCIPT ME HI RUN HOGA 
+
+
+
+why react 
+
+people realized its harder to do dom manipulation the converted way 
+for bigger websites 
+facebook react community pe hi chal raha hai 
+
+
+some react jargon
+
+State is what
+Current status of everything 
+like linkedin
+home 0 show
+and add request 99+ so this is bcz of state
+
+Components is what 
+like the home ,add request everything in box we used 
+
+like notification me hi change karna hai then utna hi part update hoga in linkedin
+
+state/component/Re-rendering 
+
+//STUDY HOOKS
